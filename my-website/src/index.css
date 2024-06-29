@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --background-color: #d3f9b5;
+    --foreground-color: #ddfc74;
+    --primary-text-color: #100b00;
+    --secondary-text-color: #3d0c11;
+    --toggle-bg: #ddfc74;
+    --toggle-fg: #bf6900;
+}
+
+[data-theme="dark"] {
+    --background-color: #100b00;
+    --foreground-color: #ddfc74;
+    --primary-text-color: #d3f9b5;
+    --secondary-text-color: #3d0c11;
+    --toggle-bg: #ddfc74;
+    --toggle-fg: #bf6900;
+}
