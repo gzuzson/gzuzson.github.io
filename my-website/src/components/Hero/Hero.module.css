@@ -1,3 +1,15 @@
-.Hero {
+.container {
+    color: var(--background-color);
+}
+
+.header, .nav {
     color: var(--primary-text-color);
+}
+
+.header {
+    font-family: var(--font-family-header);
+}
+
+.nav {
+    font-family: var(--font-family-body);
 }

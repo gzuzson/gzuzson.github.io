@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
 :root {
@@ -12,6 +11,9 @@
     --secondary-text-color: #4A0202;
     --toggle-bg: #bf6900;
     --toggle-fg: #eeb42c;
+
+    --font-family-header: "Archivo Black", sans-serif;
+    --font-family-body: "Prata", serif;
 }
 
 [data-theme="dark"] {
