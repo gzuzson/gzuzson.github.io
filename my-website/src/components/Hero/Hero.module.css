@@ -18,7 +18,7 @@
     color: var(--primary-text-color);
     font-family: var(--font-family-header);
     animation:
-            typing 5s steps(40, end) 1s infinite,
+            typing 5s steps(40, end) infinite,
             blink-caret .75s step-end infinite;
 }
 

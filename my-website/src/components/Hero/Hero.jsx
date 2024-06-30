@@ -22,7 +22,7 @@ const Hero = () => {
 
     useEffect(() => {
         if(wordIndex < words.length - 1) {
-            const interval = setInterval(changeWord, 6000);
+            const interval = setInterval(changeWord, 5000);
             return () => clearInterval(interval);
         }
     }, []);
