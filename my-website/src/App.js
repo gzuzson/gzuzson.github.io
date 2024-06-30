@@ -4,7 +4,6 @@ import React from "react";
 import {Toggle} from "./components/Toggle/Toggle";
 import useLocalStorage from "use-local-storage";
 import Palette from "./components/Palette/Palette";
-import HeroSVG from "./components/HeroSVG/HeroSVG";
 import Hero from "./components/Hero/Hero";
 
 function App() {
@@ -18,10 +17,9 @@ function App() {
             isChecked={isDark}
             handleChange={() => setIsDark(!isDark)}
           />
-          <HeroSVG />
           <Hero />
-          <Nav />
-          <Palette />
+          <Nav/>
+          <Palette/>
       </header>
     </div>
   );

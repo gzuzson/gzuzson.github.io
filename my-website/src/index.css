@@ -5,12 +5,13 @@
 }
 
 :root {
-    --background-color: #d3f9b5;
+    --background-color: #ffeedb;
     --foreground-color: #180404;
     --primary-text-color: #100b00;
     --secondary-text-color: #4A0202;
     --toggle-bg: #bf6900;
     --toggle-fg: #eeb42c;
+    --svg-color: #100b00;
 
     --font-family-header: "Archivo Black", sans-serif;
     --font-family-body: "Prata", serif;
@@ -18,9 +19,10 @@
 
 [data-theme="dark"] {
     --background-color: #180404;
-    --foreground-color: #d3f9b5;
+    --foreground-color: #ffeedb;
     --primary-text-color: #ac1212;
-    --secondary-text-color: #d3f9b5;
+    --secondary-text-color: #ffeedb;
     --toggle-bg: #eeb42c;
     --toggle-fg: #bf6900;
+    --svg-color: #ac1212;
 }
