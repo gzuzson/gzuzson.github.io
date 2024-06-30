@@ -1,3 +1,5 @@
 .container {
-    mix-blend-mode: color-dodge;
+    mix-blend-mode: screen;
 }
+
+{/* May need to update SVG file by directly editing fill= statements*/}

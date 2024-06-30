@@ -5,6 +5,7 @@ import {Toggle} from "./components/Toggle/Toggle";
 import useLocalStorage from "use-local-storage";
 import Palette from "./components/Palette/Palette";
 import HeroSVG from "./components/HeroSVG/HeroSVG";
+import Hero from "./components/Hero/Hero";
 
 function App() {
     const preference = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -18,6 +19,7 @@ function App() {
             handleChange={() => setIsDark(!isDark)}
           />
           <HeroSVG />
+          <Hero />
           <Nav />
           <Palette />
       </header>
