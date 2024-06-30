@@ -19,8 +19,8 @@
 [data-theme="dark"] {
     --background-color: #180404;
     --foreground-color: #d3f9b5;
-    --primary-text-color: #d3f9b5;
-    --secondary-text-color: #ddfc74;
+    --primary-text-color: #ac1212;
+    --secondary-text-color: #d3f9b5;
     --toggle-bg: #eeb42c;
     --toggle-fg: #bf6900;
 }

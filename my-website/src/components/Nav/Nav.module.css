@@ -4,14 +4,7 @@
     left: 1.5em;
 }
 
-.header, .nav {
-    color: var(--primary-text-color);
-}
-
-.header {
-    font-family: var(--font-family-header);
-}
-
 .nav {
+    color: var(--primary-text-color);
     font-family: var(--font-family-body);
 }

@@ -1,10 +1,10 @@
 import './App.css';
-import Nav from "./components/Hero/Nav";
+import Nav from "./components/Nav/Nav";
 import React from "react";
 import {Toggle} from "./components/Toggle/Toggle";
 import useLocalStorage from "use-local-storage";
 import Palette from "./components/Palette/Palette";
-import AnimatedText from "./components/Hero/AnimatedText/AnimatedText";
+import HeroSVG from "./components/HeroSVG/HeroSVG";
 
 function App() {
     const preference = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -17,7 +17,7 @@ function App() {
             isChecked={isDark}
             handleChange={() => setIsDark(!isDark)}
           />
-          <AnimatedText />
+          <HeroSVG />
           <Nav />
           <Palette />
       </header>

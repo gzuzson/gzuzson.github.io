@@ -1,5 +1,4 @@
 import styles from "./Nav.module.css";
-import AnimatedText from "./AnimatedText/AnimatedText";
 
 const Nav = () => {
     return (
