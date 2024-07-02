@@ -1,27 +1,31 @@
 import './App.css';
-import Nav from "./components/Nav/Nav";
 import React from "react";
-import {Toggle} from "./components/Toggle/Toggle";
 import useLocalStorage from "use-local-storage";
-import Palette from "./components/Palette/Palette";
-import Hero from "./components/Hero/Hero";
+import {Toggle} from "./components/Toggle/Toggle";
 
 function App() {
     const preference = window.matchMedia("(prefers-color-scheme: dark)").matches;
     const [isDark, setIsDark] = useLocalStorage("isDark", preference);
 
   return (
-    <div className="App" data-theme={isDark ? "dark" : "light"}>
-      <header className="App-header">
-          <Toggle
-            isChecked={isDark}
-            handleChange={() => setIsDark(!isDark)}
-          />
-          <Hero />
-          <Nav/>
-          <Palette/>
-      </header>
-    </div>
+      <div className="App" data-theme={isDark ? "dark" : "light"}>
+          <header className="App-header">
+              <nav>
+                  <a>About</a>
+                  <a>Projects</a>
+                  <a>Contact</a>
+              </nav>
+          </header>
+          <main className="App-main">
+              <div className="content">
+                  <p>
+                      I am Jeremiah Saemo, a UI Designer with full-stack web development skills,
+                      currently based in Melbourne, Australia.
+                  </p>
+                  <h1 className="hero">MIAH</h1>
+              </div>
+          </main>
+      </div>
   );
 }
 

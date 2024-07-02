@@ -1,11 +1,10 @@
 .container {
     display: flex;
-    flex-direction: row;
-    align-self: center;
-    justify-content: left;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 20%;
-    left: 60%;
+    left: 50%;
     transform: translate(-50%, -50%);
 }
 
@@ -31,4 +30,10 @@
 @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: var(--toggle-fg); }
+}
+
+@media (max-width: 430px) {
+    .typing {
+        font-size: 8vw; /* Adjust for smaller screens */
+    }
 }

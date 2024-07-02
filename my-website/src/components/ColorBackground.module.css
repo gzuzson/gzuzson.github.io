@@ -1,0 +1,32 @@
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+}
+
+.one, .two, .three, .four, .five {
+    width: 20%;
+    position: relative;
+}
+
+.one {
+    color: var(--foreground-color);
+}
+
+.two {
+    color: var(--primary-text-color);
+}
+
+.three {
+    color: var(--secondary-text-color);
+}
+
+.four {
+    color: var(--toggle-bg);
+}
+
+.five {
+    color: var(--toggle-fg);
+}
