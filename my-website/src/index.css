@@ -5,25 +5,22 @@
 }
 
 :root {
-    --background-color: #ffeedb;
-    --foreground-color: #180404;
-    --primary-text-color: #100b00;
+    --background-color: #eef1e4;
+    --foreground-color: #2B2729;
+    --primary-text-color: #293132;
     --secondary-text-color: #4A0202;
-    --toggle-bg: #bf6900;
-    --toggle-fg: #eeb42c;
-    --svg-color: #100b00;
+    --toggle-bg: #719cc6;
+    --toggle-fg: #8783d1;
 
-    --font-family-header: "Archivo Black", sans-serif;
-    --font-family-body: "Prata", serif;
+    --font-family-body: "Space Mono", monospace;
     --font-family-hero: "Krona One", sans-serif;
 }
 
 [data-theme="dark"] {
-    --background-color: #180404;
-    --foreground-color: #ffeedb;
-    --primary-text-color: #ac1212;
+    --background-color: #2B2729;
+    --foreground-color: #eef1e4;
+    --primary-text-color: #eef1e4;
     --secondary-text-color: #ffeedb;
-    --toggle-bg: #eeb42c;
-    --toggle-fg: #bf6900;
-    --svg-color: #ac1212;
+    --toggle-bg: #8783d1;
+    --toggle-fg: #719cc6;
 }

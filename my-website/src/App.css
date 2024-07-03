@@ -23,6 +23,9 @@ nav {
 }
 nav a {
     text-decoration: none;
+    font-family: var(--font-family-body);
+    font-weight: 400;
+    color: var(--secondary-text-color);
 }
 
 .App-main {
@@ -57,6 +60,8 @@ nav a {
 
 .toggleLabel {
     color: var(--primary-text-color);
+    font-family: var(--font-family-body);
+    font-weight: 400;
 }
 
 .toggle input[type="checkbox"] {
@@ -71,7 +76,7 @@ nav a {
 }
 
 .toggle input[type="checkbox"]:checked {
-    background-color: #007bff; /* Checked background color */
+    background-color: var(--toggle-bg); /* Checked background color */
 }
 
 .toggle input[type="checkbox"]::before {
@@ -86,6 +91,7 @@ nav a {
     font-family: var(--font-family-hero);
     font-size: 44px;
     text-decoration: none;
+    color: var(--primary-text-color);
 }
 
 .project {

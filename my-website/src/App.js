@@ -1,7 +1,7 @@
 import './App.css';
 import React from "react";
 import useLocalStorage from "use-local-storage";
-import AppHeader from "./components/AppHeader";
+import AppHeader from "./components/AppHeader/AppHeader";
 import Toggle from "./components/Toggle/Toggle";
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
                       StaticFactory
                   </div>
                   <div className="project">
-                      This is an example
+                      Graphic Design Work
                   </div>
                   <div className="project">
                       This is an example
