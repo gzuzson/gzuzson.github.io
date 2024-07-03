@@ -10,7 +10,6 @@
     --primary-text-color: #293132;
     --secondary-text-color: #4A0202;
     --toggle-bg: #719cc6;
-    --toggle-fg: #8783d1;
 
     --font-family-body: "Space Mono", monospace;
     --font-family-hero: "Krona One", sans-serif;
@@ -22,5 +21,4 @@
     --primary-text-color: #eef1e4;
     --secondary-text-color: #ffeedb;
     --toggle-bg: #8783d1;
-    --toggle-fg: #719cc6;
 }

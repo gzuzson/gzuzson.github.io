@@ -1,4 +1,4 @@
-import {ReactComponent as SVG} from './hero.svg'
+import {ReactComponent as SVG} from '../../../assets/hero.svg'
 import styles from './HeroSVG.module.css'
 
 const HeroSVG = () => (

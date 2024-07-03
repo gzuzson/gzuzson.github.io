@@ -1,0 +1,31 @@
+.text {
+    box-sizing: border-box;
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.text p {
+    margin: 5px;
+    padding: 5px;
+}
+
+.image {
+    box-sizing: border-box;
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    flex: 1;
+    border: var(--foreground-color) solid 2px;
+    align-items: center;
+    justify-content: center;
+}
+
+.svg {
+    width: 100%;
+    min-width: 500px;
+    max-width: 100%;
+    display: block;
+}
