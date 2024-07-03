@@ -13,7 +13,7 @@ function Toggle({ isDark, setIsDark }) {
             <input
                 type="checkbox"
                 checked={isDark}
-                onChange={() => setIsDark(isDark)}
+                onChange={() => setIsDark(!isDark)}
             />
         </div>
     );
