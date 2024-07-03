@@ -1,5 +1,7 @@
 * {
+    /*
     border: 1px solid var(--foreground-color);
+     */
 }
 
 .App {
@@ -41,7 +43,7 @@ nav a {
 
 .content {
     width: 95%;
-    height: 85vh;
+    height: 87vh;
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
@@ -121,6 +123,7 @@ nav a {
 
     .project {
         width: 50%;
+        height: 50%;
     }
 
     .toggle {
@@ -128,5 +131,12 @@ nav a {
         writing-mode: horizontal-tb;
         transform: none;
         padding: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .project {
+        width: 100%;
+        height: 50%;
     }
 }

@@ -15,14 +15,13 @@ function About() {
                     but, more importantly, for the people that use it.
                 </p>
                 <p>
-                    I believe that people ignore design that ignores people, and so I
-                    build with a people-first design philosophy in mind. Having the
-                    ability to outline problems, or come up with ideas, and being able to
-                    create value by generating solutions, is something that brings me great joy.
+                    I believe that people ignore design that ignores people, and so I believe successful design
+                    is achieved through understanding the people I am designing for.  Having the ability to
+                    outline problems, or come up with ideas, and being able to create value by generating
+                    solutions, is something that brings me great joy.
                 </p>
                 <p>
-                    The icons to the side represent the tools I am currently working with that help me
-                    build cool stuff.
+                    The icons in the background represent some of the tools I am currently working with.
                     {/*
                     - React
                     - JavaScript
@@ -39,9 +38,6 @@ function About() {
                 <p>
                     Let's connect!
                 </p>
-            </div>
-            <div className={styles.image}>
-
             </div>
         </div>
     );
