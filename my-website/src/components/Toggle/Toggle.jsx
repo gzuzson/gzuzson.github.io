@@ -1,16 +1,22 @@
-import styles from "./Toggle.module.css";
+import React from 'react';
 
-export const Toggle = ({handleChange, isChecked }) => {
+function Toggle({ isDark, setIsDark }) {
     return (
-        <div className={styles.container}>
+        <div className="toggle">
+            <p className="toggleLabel">LIGHT</p>
             <input
                 type="checkbox"
-                id="check"
-                className={styles.toggle}
-                onChange={handleChange}
-                checked={isChecked}
+                checked={!isDark}
+                onChange={() => setIsDark(!isDark)}
             />
-            <label htmlFor="check"></label>
+            <p className="toggleLabel">DARK</p>
+            <input
+                type="checkbox"
+                checked={isDark}
+                onChange={() => setIsDark(isDark)}
+            />
         </div>
     );
-};
+}
+
+export default Toggle;

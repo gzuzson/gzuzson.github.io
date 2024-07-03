@@ -1,7 +1,8 @@
 import './App.css';
 import React from "react";
 import useLocalStorage from "use-local-storage";
-import {Toggle} from "./components/Toggle/Toggle";
+import AppHeader from "./components/AppHeader";
+import Toggle from "./components/Toggle/Toggle";
 
 function App() {
     const preference = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -9,31 +10,21 @@ function App() {
 
   return (
       <div className="App" data-theme={isDark ? "dark" : "light"}>
-          <header className="App-header">
-              <a href="#" className="hero">MIAH</a>
-              <nav>
-                  <a href="#">About</a>
-                  <a href="#">Contact</a>
-              </nav>
-          </header>
+          <AppHeader />
           <main className="App-main">
-              <div className="toggle">
-                  <a>DARK</a>
-                  <a>LIGHT</a>
-                  <a>FONT</a>
-              </div>
+              <Toggle isDark={isDark} setIsDark={setIsDark}/>
               <div className="content">
                   <div className="project">
-                      This is an example
+                      TheVeryRare
                   </div>
                   <div className="project">
-                      This is an example
+                      Entry
                   </div>
                   <div className="project">
-                      This is an example
+                      FieryDragons
                   </div>
                   <div className="project">
-                      This is an example
+                      StaticFactory
                   </div>
                   <div className="project">
                       This is an example

@@ -52,6 +52,34 @@ nav a {
     transform: rotate(180deg);
     padding: 5px;
     margin: 5px;
+    gap: 10px;
+}
+
+.toggleLabel {
+    color: var(--primary-text-color);
+}
+
+.toggle input[type="checkbox"] {
+    margin-right: 10px; /* Adds space between checkbox and label */
+    width: 24px; /* Adjust width to make the checkbox bigger */
+    height: 24px; /* Adjust height to make the checkbox bigger */
+    appearance: none;
+    outline: none;
+    border: 1px solid var(--foreground-color);
+    border-radius: 2px;
+    background-color: var(--background-color);
+}
+
+.toggle input[type="checkbox"]:checked {
+    background-color: #007bff; /* Checked background color */
+}
+
+.toggle input[type="checkbox"]::before {
+    content: ""; /* Empty content */
+}
+
+.toggle input[type="checkbox"]:checked::before {
+    visibility: visible; /* Show the checkmark when checked */
 }
 
 .hero {
