@@ -10,19 +10,43 @@ function App() {
   return (
       <div className="App" data-theme={isDark ? "dark" : "light"}>
           <header className="App-header">
+              <a href="#" className="hero">MIAH</a>
               <nav>
-                  <a>About</a>
-                  <a>Projects</a>
-                  <a>Contact</a>
+                  <a href="#">About</a>
+                  <a href="#">Contact</a>
               </nav>
           </header>
           <main className="App-main">
+              <div className="toggle">
+                  <a>DARK</a>
+                  <a>LIGHT</a>
+                  <a>FONT</a>
+              </div>
               <div className="content">
-                  <p>
-                      I am Jeremiah Saemo, a UI Designer with full-stack web development skills,
-                      currently based in Melbourne, Australia.
-                  </p>
-                  <h1 className="hero">MIAH</h1>
+                  <div className="project">
+                      This is an example
+                  </div>
+                  <div className="project">
+                      This is an example
+                  </div>
+                  <div className="project">
+                      This is an example
+                  </div>
+                  <div className="project">
+                      This is an example
+                  </div>
+                  <div className="project">
+                      This is an example
+                  </div>
+                  <div className="project">
+                      This is an example
+                  </div>
+                  <div className="project">
+                      This is an example
+                  </div>
+                  <div className="project">
+                      This is an example
+                  </div>
               </div>
           </main>
       </div>
