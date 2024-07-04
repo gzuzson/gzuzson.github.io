@@ -7,7 +7,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
-import ThreeScene from "./components/ThreeScene";
+import ThreeScene from "./components/ThreeScene/ThreeScene";
 
 function App() {
     const preference = window.matchMedia("(prefers-color-scheme: dark)").matches;
