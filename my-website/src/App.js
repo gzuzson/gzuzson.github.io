@@ -7,6 +7,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import ThreeScene from "./components/ThreeScene";
 
 function App() {
     const preference = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -19,15 +20,14 @@ function App() {
                 <main className="App-main">
                     <Toggle isDark={isDark} setIsDark={setIsDark}/>
                     <Routes>
-                        <Route path="/" element={<Home />} />
-                    </Routes>
-                    <Routes>
-                        <Route path="/about" element={<About />} />
-                    </Routes>
-                    <Routes>
-                        <Route path="/contact" element={<Contact />} />
+                        <Route path="/" element={<Home/>}/>
+                        <Route path="/about" element={<About/>}/>
+                        <Route path="/contact" element={<Contact/>}/>
                     </Routes>
                 </main>
+            </div>
+            <div className="background">
+                <ThreeScene />
             </div>
         </BrowserRouter>
     );
