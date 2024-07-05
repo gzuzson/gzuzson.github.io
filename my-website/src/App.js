@@ -8,6 +8,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import ThreeScene from "./components/ThreeScene/ThreeScene";
+import {Canvas} from "@react-three/fiber";
 
 function App() {
     const preference = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -27,7 +28,12 @@ function App() {
                 </main>
             </div>
             <div className="background">
-                <ThreeScene />
+                <Canvas>
+                    <ambientLight intensity={Math.PI / 2} />
+                    <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} decay={0} intensity={Math.PI} />
+                    <pointLight position={[-10, -10, -10]} decay={0} intensity={Math.PI} />
+                    <ThreeScene />
+                </Canvas>,
             </div>
         </BrowserRouter>
     );

@@ -1,15 +1,17 @@
 import { OrbitControls } from '@react-three/drei';
-import {Canvas} from "@react-three/fiber";
+import {MeshReact} from "./meshes/MeshReact";
+import {MeshTailwind} from "./meshes/MeshTailwind";
+import {MeshTypeScript} from "./meshes/MeshTypeScript";
+
 
 const ThreeScene = () => {
     return (
-        <Canvas>
+        <>
             <OrbitControls/>
-            <mesh>
-                <boxGeometry/>
-                <meshStandardMaterial/>
-            </mesh>
-        </Canvas>
+            <MeshReact />
+            <MeshTailwind />
+            <MeshTypeScript />
+        </>
     );
 }
 
