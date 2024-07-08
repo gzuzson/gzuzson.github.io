@@ -9,7 +9,7 @@ export function MeshTypeScript(props) {
     const { nodes, materials } = useGLTF('/typescript.clb')
     return (
         <group {...props} dispose={null}>
-            <group scale={1.616}>
+            <group scale={0.616}>
                 <mesh
                     castShadow
                     receiveShadow

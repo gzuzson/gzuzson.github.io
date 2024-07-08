@@ -18,6 +18,7 @@
     display: flex;
     padding: 15px;
     position: sticky;
+    z-index: 1;
 }
 
 .App-main {
@@ -62,6 +63,7 @@ nav a {
     padding: 5px;
     margin: 5px;
     gap: 10px;
+    z-index: 1;
 }
 
 .toggleLabel {
@@ -118,6 +120,7 @@ nav a {
     height: 100%;
     pointer-events: none; /* Ensure clicks go through to elements below */
     z-index: 0; /* Ensure background is behind everything */
+    filter: blur(10px); /* Apply blur effect */
 }
 
 @media (max-width: 768px) {

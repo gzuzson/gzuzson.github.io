@@ -9,7 +9,7 @@ export function MeshTailwind(props) {
     const { nodes, materials } = useGLTF('/tailwind.glb')
     return (
         <group {...props} dispose={null}>
-            <group scale={1}>
+            <group scale={0.75}>
                 <mesh
                     castShadow
                     receiveShadow
