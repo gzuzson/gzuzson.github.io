@@ -1,11 +1,11 @@
 import React from "react";
 
-function Home() {
+function Home({isDark}) {
     return (
         <div className="content">
-            <div className="project">
-                TheVeryRare
-            </div>
+            <a className="project" href="https://theveryrare.co" target="_blank" rel="noopener noreferrer">
+                    <img src={isDark ? "/tvr/Logo%20White.png" : "/tvr/Logo%20Black.png"} alt="TheVeryRare Logo" width="75%" />
+            </a>
             <div className="project">
                 Entry
             </div>
@@ -17,15 +17,6 @@ function Home() {
             </div>
             <div className="project">
                 Graphic Design Work
-            </div>
-            <div className="project">
-                This is an example
-            </div>
-            <div className="project">
-                This is an example
-            </div>
-            <div className="project">
-                This is an example
             </div>
         </div>
     );

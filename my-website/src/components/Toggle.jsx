@@ -1,6 +1,10 @@
 import React from 'react';
 
-function Toggle({ isDark, setIsDark }) {
+function Toggle({ isDark, setIsDark, isBlurOn, setIsBlurOn }) {
+    const handleBlurToggle = () => {
+        setIsBlurOn((prev) => !prev); // Toggle the state for blur effect
+    };
+
     return (
         <div className="toggle">
             <p className="toggleLabel">LIGHT</p>
@@ -14,6 +18,12 @@ function Toggle({ isDark, setIsDark }) {
                 type="checkbox"
                 checked={isDark}
                 onChange={() => setIsDark(!isDark)}
+            />
+            <p className="toggleLabel">BLUR</p>
+            <input
+                type="checkbox"
+                checked={isBlurOn}
+                onChange={handleBlurToggle}
             />
         </div>
     );

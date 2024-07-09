@@ -99,7 +99,7 @@ nav a {
     font-family: var(--font-family-hero);
     font-size: 44px;
     text-decoration: none;
-    color: var(--primary-text-color);
+    color: var(--secondary-text-color);
 }
 
 .project {
@@ -109,7 +109,14 @@ nav a {
     box-sizing: border-box;
     padding: 10px;
     align-items: center;
-    justify-content: center;
+   justify-content: center;
+    z-index: 1;
+}
+
+.project img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 
 .background {
@@ -121,6 +128,7 @@ nav a {
     pointer-events: none; /* Ensure clicks go through to elements below */
     z-index: 0; /* Ensure background is behind everything */
     filter: blur(10px); /* Apply blur effect */
+    transition: filter 0.3s ease; /* Add transition for smooth effect */
 }
 
 @media (max-width: 768px) {
