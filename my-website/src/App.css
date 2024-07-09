@@ -109,7 +109,7 @@ nav a {
     box-sizing: border-box;
     padding: 10px;
     align-items: center;
-   justify-content: center;
+    justify-content: center;
     z-index: 1;
 }
 
@@ -129,6 +129,7 @@ nav a {
     z-index: 0; /* Ensure background is behind everything */
     filter: blur(10px); /* Apply blur effect */
     transition: filter 0.3s ease; /* Add transition for smooth effect */
+    overflow-y: hidden;
 }
 
 @media (max-width: 768px) {
