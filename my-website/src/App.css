@@ -39,7 +39,7 @@ nav a {
     text-decoration: none;
     font-family: var(--font-family-body);
     font-weight: 400;
-    color: var(--secondary-text-color);
+    color: var(--primary-text-color);
 }
 
 .content {
@@ -49,7 +49,7 @@ nav a {
     flex-wrap: wrap;
     box-sizing: border-box;
     padding: 15px;
-    color: var(--secondary-text-color);
+    color: var(--primary-text-color);
     font-family: var(--font-family-body);
     margin: 5px;
     overflow-y: auto;
@@ -99,7 +99,7 @@ nav a {
     font-family: var(--font-family-hero);
     font-size: 44px;
     text-decoration: none;
-    color: var(--secondary-text-color);
+    color: var(--primary-text-color);
 }
 
 .project {

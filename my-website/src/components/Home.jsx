@@ -1,23 +1,30 @@
 import React from "react";
 
 function Home({isDark}) {
+    const handleClick = () => {
+        alert('Coming soon');
+    };
+
     return (
         <div className="content">
             <a className="project" href="https://theveryrare.co" target="_blank" rel="noopener noreferrer">
-                    <img src={isDark ? "/tvr/Logo%20White.png" : "/tvr/Logo%20Black.png"} alt="TheVeryRare Logo" width="75%" />
+                <img src={isDark ? "/images/Logo%20White.png" : "/images/Logo%20Black.png"} alt="TheVeryRare Logo"
+                     width="75%"/>
             </a>
-            <div className="project">
-                Entry
-            </div>
-            <div className="project">
-                FieryDragons
-            </div>
-            <div className="project">
-                StaticFactory
-            </div>
-            <div className="project">
-                Graphic Design Work
-            </div>
+            <a className="project" rel="noopener noreferrer" onClick={handleClick}>
+                <img src={isDark ? "/images/logos/SVG/entry-logo-white.svg" : "/images/logos/SVG/entry-logo-black.svg"}
+                     alt="Entry Logo" width="50%"/>
+            </a>
+            <a className="project" rel="noopener noreferrer"  onClick={handleClick}>
+                <img
+                    src={isDark ? "/images/logos/SVG/fiery-dragons-alt-white.svg" : "/images/logos/SVG/fiery-dragons-alt-black.svg"}
+                    alt="Entry Logo" width="50%"/>
+            </a>
+            <a className="project" rel="noopener noreferrer" onClick={handleClick}>
+                <img
+                    src={isDark ? "/images/logos/SVG/static-factory-white.svg" : "/images/logos/SVG/static-factory-black.svg"}
+                    alt="Entry Logo" width="50%"/>
+            </a>
         </div>
     );
 }
