@@ -7,7 +7,7 @@ import {MeshJavaScript} from "./meshes/MeshJavaScript";
 
 const scatterObjects = (count) => {
     const objects = [];
-    const meshes = [MeshReact, MeshTailwind, MeshTypeScript, MeshJavaScript]; // Array of your mesh components
+    const meshes = [MeshReact, MeshTypeScript, MeshJavaScript]; // Array of your mesh components
 
     for (let i = 0; i < count; i++) {
         const position = [

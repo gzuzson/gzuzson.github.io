@@ -5,38 +5,36 @@ function About() {
     return (
         <div className="content">
             <div className={styles.text}>
-                <p> Hi :) </p>
+                <h1>About Me</h1>
+                <p> Hi, I'm Jeremiah, but most people call me Miah - pronounced "ma-ya" </p>
                 <p>
-                    I'm Jeremiah, but most people call me Miah  - pronounced "ma-ya".
+                    I am a final year IT student currently based in Melbourne (AUS),
+                    specialising in Software Development, and focused on
+                    building digital products and experiences for both mobile and the web.
+                    Software is one of the mediums through which I express myself.
                 </p>
                 <p>
-                    I am a Full Stack Developer currently based in Melbourne (AUS),
-                    focused on building digital products and experiences for both mobile and the web,
-                    but, more importantly, for the people that use it.
+                    In my spare time, I enjoy tinkering around with software projects, like building mobile apps.
+                    Outside of software, I enjoy spending time with family, reading books,
+                    being in the sun, choosing an outfit to wear for the day, listening to music,
+                    and following the sports of boxing and basketball.
+                </p>
+                <h2>Programming</h2>
+                <p>
+                    For me, the craft of programming is 99% the abstract; concepts like:  data structures,
+                    algorithms, abstraction, best practices, architecture and design, people, culture, and
+                    many other aspects that are agnostic to a particular programming language or technology.
                 </p>
                 <p>
-                    I believe that people ignore design that ignores people, and so I believe successful design
-                    is achieved through understanding the people I am designing for.  Having the ability to
-                    outline problems, or come up with ideas, and being able to create value by generating
-                    solutions, is something that brings me great joy.
+                    When it comes to building new projects, I believe in 'The right tool for the right job',
+                    and have written programs in a variety of different languages.  Nevertheless, the icons
+                    in the background represent some of the tools that I am working with at the moment.
                 </p>
+                <h2>This Website</h2>
                 <p>
-                    The icons in the background represent some of the tools I am currently working with.
-                    {/*
-                    - React
-                    - JavaScript
-                    - TypeScript
-                    - Git
-                    - CSS
-                    - PHP
-                    - CakePHP
-                    - Java
-                    - MySQL
-                    - MongoDB
-                    */}
-                </p>
-                <p>
-                    Let's connect!
+                    This website was built using React.js and React Fiber (three.js)
+                    and is hosted on Github Pages.  The website is maintained by me, last updated
+                    2024-07-10 :)
                 </p>
             </div>
         </div>

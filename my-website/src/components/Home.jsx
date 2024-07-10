@@ -17,7 +17,7 @@ function Home({isDark}) {
             </a>
             <a className="project" rel="noopener noreferrer"  onClick={handleClick}>
                 <img
-                    src={isDark ? "/images/logos/SVG/fiery-dragons-alt-white.svg" : "/images/logos/SVG/fiery-dragons-alt-black.svg"}
+                    src={isDark ? "/images/logos/SVG/fiery-dragons-white.svg" : "/images/logos/SVG/fiery-dragons-black.svg"}
                     alt="Entry Logo" width="50%"/>
             </a>
             <a className="project" rel="noopener noreferrer" onClick={handleClick}>
