@@ -11,12 +11,12 @@ const scatterObjects = (count) => {
 
     for (let i = 0; i < count; i++) {
         const position = [
-            (Math.random() - 0.5) * 40,
-            (Math.random() - 0.5) * 20,
-            (Math.random() - 0.5) * 80
+            (Math.random() - 0.5) * 30,
+            (Math.random() - 0.5) * 10,
+            (Math.random() - 0.5) * 20
         ];
 
-        const speed = 0.1 + Math.random() * 0.5; // Random speed for shooting stars
+        const speed = 0.1 + Math.random() * 0.5; // Random speed
         const velocity = {
             x: (Math.random() - 0.5) * speed,
             y: (Math.random() - 0.5) * speed,
@@ -27,8 +27,6 @@ const scatterObjects = (count) => {
         objects.push(<MeshComponent key={i} position={position} userData={{ velocity }} />);
     }
 
-
-
     return objects;
 };
 
@@ -36,7 +34,7 @@ const ThreeScene = () => {
     return (
         <>
             <FloatingObjects >
-                {scatterObjects(75)} {/* adjust the number of objects as needed */}
+                {scatterObjects(20)} {/* adjust the number of objects as needed */}
             </FloatingObjects>
         </>
     );
