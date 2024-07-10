@@ -132,8 +132,6 @@ nav a:hover {
     height: 100%;
     pointer-events: none; /* Ensure clicks go through to elements below */
     z-index: 0; /* Ensure background is behind everything */
-    filter: blur(10px); /* Apply blur effect */
-    transition: filter 0.3s ease; /* Add transition for smooth effect */
     overflow-y: hidden;
 }
 

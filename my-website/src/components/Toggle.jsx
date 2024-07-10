@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Toggle({ isDark, setIsDark, isBlurOn, setIsBlurOn }) {
-    const handleBlurToggle = () => {
-        setIsBlurOn((prev) => !prev); // Toggle the state for blur effect
+function Toggle({ isDark, setIsDark, isShowingLogos, setIsShowingLogos }) {
+    const handleOpacityToggle = () => {
+        setIsShowingLogos((prev) => !prev); // Toggle the state for opacity effect
     };
 
     return (
@@ -19,11 +19,11 @@ function Toggle({ isDark, setIsDark, isBlurOn, setIsBlurOn }) {
                 checked={isDark}
                 onChange={() => setIsDark(!isDark)}
             />
-            <p className="toggleLabel">BLUR</p>
+            <p className="toggleLabel">LOGOS</p>
             <input
                 type="checkbox"
-                checked={isBlurOn}
-                onChange={handleBlurToggle}
+                checked={!isShowingLogos}
+                onChange={handleOpacityToggle}
             />
         </div>
     );

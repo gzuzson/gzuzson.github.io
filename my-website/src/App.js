@@ -13,14 +13,14 @@ import {Canvas} from "@react-three/fiber";
 function App() {
     const preference = window.matchMedia("(prefers-color-scheme: dark)").matches;
     const [isDark, setIsDark] = useLocalStorage("isDark", preference);
-    const [isBlurOn, setIsBlurOn] = useState(true); // State for blur effect
+    const [isShowingLogos, setIsShowingLogos] = useState(true);
 
     return (
         <BrowserRouter>
             <div className="App" data-theme={isDark ? "dark" : "light"}>
                 <AppHeader/>
                 <main className="App-main">
-                    <Toggle isDark={isDark} setIsDark={setIsDark} isBlurOn={isBlurOn} setIsBlurOn={setIsBlurOn} />
+                    <Toggle isDark={isDark} setIsDark={setIsDark} isShowingLogos={isShowingLogos} setIsShowingLogos={setIsShowingLogos} />
                     <Routes>
                         <Route path="/" element={<Home isDark={isDark}/>}/>
                         <Route path="/about" element={<About/>}/>
@@ -28,7 +28,7 @@ function App() {
                     </Routes>
                 </main>
             </div>
-            <div className="background" style={{ filter: isBlurOn ? 'blur(10px)' : 'none' }}>
+            <div className="background" style={{ filter: isShowingLogos ? 'opacity(0%)' : 'none' }}>
                 <Canvas camera={{position: [0, 0, 10]}}>
                     <ambientLight intensity={Math.PI / 2} />
                     <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} decay={0} intensity={Math.PI} />
