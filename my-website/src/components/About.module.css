@@ -5,20 +5,11 @@
     display: flex;
     flex: 1;
     flex-direction: column;
+    overflow-y: auto;
+    z-index: 1;
 }
 
 .text p {
     margin: 5px;
     padding: 5px;
-}
-
-.image {
-    box-sizing: border-box;
-    margin: 5px;
-    padding: 5px;
-    display: flex;
-    flex: 1;
-    border: var(--foreground-color) solid 2px;
-    align-items: center;
-    justify-content: center;
 }

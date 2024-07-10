@@ -57,7 +57,6 @@ nav a:hover {
     font-family: var(--font-family-body);
     margin: 5px;
     overflow-y: auto;
-    transition: opacity 0.3s ease;
 }
 
 .toggle {
@@ -178,9 +177,11 @@ nav a:hover {
 }
 
 .social-icons {
+    height: 200px;
     margin-top: 10px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .social-icons a {
@@ -188,7 +189,7 @@ nav a:hover {
     font-size: 3.5rem;
     line-height: 2rem;
     margin-right: 10px;
-    transition: transform 250ms
+    transition: transform 250ms;
 }
 
 .social-icons a:hover {

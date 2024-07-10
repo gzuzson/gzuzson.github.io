@@ -11,9 +11,9 @@ const scatterObjects = (count) => {
 
     for (let i = 0; i < count; i++) {
         const position = [
-            (Math.random() - 0.5) * 30,
-            (Math.random() - 0.5) * 10,
-            (Math.random() - 0.5) * 20
+            (Math.random() - 0.5) * 40,
+            (Math.random() - 0.5) * 20,
+            (Math.random() - 0.5) * 50
         ];
 
         const speed = 0.1 + Math.random() * 0.5; // Random speed
@@ -34,7 +34,7 @@ const ThreeScene = () => {
     return (
         <>
             <FloatingObjects >
-                {scatterObjects(20)} {/* adjust the number of objects as needed */}
+                {scatterObjects(40)} {/* adjust the number of objects as needed */}
             </FloatingObjects>
         </>
     );
