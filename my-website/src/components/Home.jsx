@@ -20,7 +20,7 @@ function Home({isDark}) {
                     src={isDark ? "/images/logos/SVG/fiery-dragons-white.svg" : "/images/logos/SVG/fiery-dragons-black.svg"}
                     alt="Entry Logo" width="50%"/>
             </a>
-            <a className="project" href="https://github.com/gzuzson/StaticFactory" rel="noopener noreferrer">
+            <a className="project" href="https://github.com/gzuzson/StaticFactory" target="_blank" rel="noopener noreferrer">
                 <img
                     src={isDark ? "/images/logos/SVG/static-factory-white.svg" : "/images/logos/SVG/static-factory-black.svg"}
                     alt="Entry Logo" width="50%"/>
