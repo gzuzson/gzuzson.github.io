@@ -4,7 +4,7 @@ Personal portfolio website to include:
 - Projects
 - About/Interests
 - Skills
-- Downloadable Resume
+- Contact
 
 ## Running application
 
