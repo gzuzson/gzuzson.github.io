@@ -3,7 +3,7 @@
     margin: 5px;
     padding: 5px;
     display: flex;
-    flex: 1;
+    flex: 5;
     flex-direction: column;
     overflow-y: auto;
     z-index: 1;
@@ -12,4 +12,23 @@
 .text p {
     margin: 5px;
     padding: 5px;
+}
+
+.image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 2;
+    padding: 10px;
+}
+
+.image img {
+    min-width: 200px;
+    max-width: 400px;
+}
+
+@media (max-width: 1080px) {
+    .text, .image {
+        flex: auto; /* Ensures both take full width and stack vertically */
+    }
 }

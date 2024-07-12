@@ -14,28 +14,31 @@ function About() {
                     Software is one of the mediums through which I express myself.
                 </p>
                 <p>
-                    In my spare time, I enjoy tinkering around with software projects, like building mobile apps.
+                    In my spare time, I enjoy working on small software projects, like building mobile apps.
                     Outside of software, I enjoy spending time with family, reading books,
-                    being in the sun, choosing an outfit to wear for the day, listening to music,
+                    being in the sun, choosing an outfit to wear for the day, listening to music, going to the gym,
                     and following the sports of boxing and basketball.
                 </p>
                 <h2>Programming</h2>
                 <p>
-                    For me, the craft of programming is 99% the abstract; concepts like:  data structures,
+                    For me, the craft of programming is 99% the abstract; concepts like: data structures,
                     algorithms, abstraction, best practices, architecture and design, people, culture, and
                     many other aspects that are agnostic to a particular programming language or technology.
                 </p>
                 <p>
                     When it comes to building new projects, I believe in 'The right tool for the right job',
-                    and have written programs in a variety of different languages.  Nevertheless, the icons
-                    in the background represent some of the tools that I am working with at the moment.
+                    and have written programs in a variety of different languages. Nevertheless, the icons
+                    in the background represent some of the tools that I am working with at the moment (press 'LOGOS').
                 </p>
                 <h2>This Website</h2>
                 <p>
                     This website was built using React.js and React Fiber (three.js)
-                    and is hosted on Github Pages.  The website is maintained by me, last updated
+                    and is hosted on Github Pages. The website is maintained by me, last updated
                     2024-07-10 :)
                 </p>
+            </div>
+            <div className={styles.image}>
+                <img src="/images/miah.jpg" alt="Photo of Jeremiah Saemo" width="100%" height="auto"/>
             </div>
         </div>
     );
