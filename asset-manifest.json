@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/gzuzson/gzuzson.github.io/static/css/main.4a438ffa.css",
-    "main.js": "/gzuzson/gzuzson.github.io/static/js/main.8ca14d34.js",
-    "static/js/453.195b869a.chunk.js": "/gzuzson/gzuzson.github.io/static/js/453.195b869a.chunk.js",
-    "index.html": "/gzuzson/gzuzson.github.io/index.html",
-    "main.4a438ffa.css.map": "/gzuzson/gzuzson.github.io/static/css/main.4a438ffa.css.map",
-    "main.8ca14d34.js.map": "/gzuzson/gzuzson.github.io/static/js/main.8ca14d34.js.map",
-    "453.195b869a.chunk.js.map": "/gzuzson/gzuzson.github.io/static/js/453.195b869a.chunk.js.map"
+    "main.css": "/gzuzson.github.io/static/css/main.4a438ffa.css",
+    "main.js": "/gzuzson.github.io/static/js/main.69e64138.js",
+    "static/js/453.195b869a.chunk.js": "/gzuzson.github.io/static/js/453.195b869a.chunk.js",
+    "index.html": "/gzuzson.github.io/index.html",
+    "main.4a438ffa.css.map": "/gzuzson.github.io/static/css/main.4a438ffa.css.map",
+    "main.69e64138.js.map": "/gzuzson.github.io/static/js/main.69e64138.js.map",
+    "453.195b869a.chunk.js.map": "/gzuzson.github.io/static/js/453.195b869a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4a438ffa.css",
-    "static/js/main.8ca14d34.js"
+    "static/js/main.69e64138.js"
   ]
 }
