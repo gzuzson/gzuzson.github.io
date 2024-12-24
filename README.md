@@ -15,6 +15,17 @@ cd my-website
 npm start
 ```
 
+## Deployment
+
+GitHub pages is set up using the gh-pages branch for deployment.  As such, the following command will create a build of the latest version of the website within the main branch and deploy the build to the gh-pages branch. 
+
+```
+npm run deploy
+```
+
+Once the above command is run, make sure to update the custom domain on GitHub at gzuzson.github.io -> Settings -> Pages. 
+By default, GitHub pages removes the custom domain when deploying a new version of the website.  
+
 ## TO-DO
 - [X] Update About Me section
 - [ ] Add a Blog feature to the website

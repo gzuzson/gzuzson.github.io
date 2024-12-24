@@ -4,6 +4,7 @@
      */
 }
 
+/* App Container Styles */
 .App {
     width: 100%;
     height: 100%;
@@ -13,6 +14,7 @@
     box-sizing: border-box;
 }
 
+/* Header Styles */
 .App-header {
     width: 100%;
     display: flex;
@@ -27,6 +29,7 @@
     flex-wrap: wrap;
 }
 
+/* Navigation Styles */
 nav {
     width: 100%;
     display: flex;
@@ -46,19 +49,22 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/* Content Area Styles */
 .content {
     width: 95%;
-    height: 87vh;
+    height: auto;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     box-sizing: border-box;
     padding: 15px;
     color: var(--primary-text-color);
     font-family: var(--font-family-body);
     margin: 5px;
     overflow-y: auto;
+    gap: 3rem;
 }
 
+/* Toggle Styles */
 .toggle {
     width: 2%;
     display: flex;
@@ -99,11 +105,21 @@ nav a:hover {
     visibility: visible;
 }
 
+/* Logo Styles */
 .logo {
     font-family: var(--font-family-hero);
     font-size: 44px;
     text-decoration: none;
     color: var(--primary-text-color);
+}
+
+/* Projects Grid Styles */
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 2rem 0;
+    z-index: 1;
 }
 
 .project {
@@ -115,7 +131,7 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     z-index: 1;
-    transition: transform 250ms
+    transition: transform 250ms;
 }
 
 .project img {
@@ -124,56 +140,121 @@ nav a:hover {
     object-fit: contain;
 }
 
+.project:hover {
+    transform: translateY(-10px);
+}
+
+/* Services Header Styles */
+.services-header {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--primary-text-color);
+}
+
+.services-header h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-family: var(--font-family-hero);
+}
+
+.services-header p {
+    font-size: 1.125rem;
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--primary-text-color);
+}
+
+/* Services Grid Styles */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    width: 100%;
+}
+
+.service-card {
+    background: var(--background-color);
+    border: 1px solid var(--foreground-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.2s ease;
+    z-index: 1;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-family: var(--font-family-hero);
+}
+
+.service-card p {
+    color: var(--primary-text-color);
+}
+
+/* CTA Section Styles */
+.cta-section {
+    border: 1px solid var(--foreground-color);
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    z-index: 1;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.cta-section h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-family: var(--font-family-hero);
+}
+
+.cta-section p {
+    max-width: 600px;
+    margin: 0 auto 1.5rem auto;
+}
+
+.cta-button {
+    display: inline-block;
+    background: white;
+    color: #2563eb;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.cta-button:hover {
+    background: #f8fafc;
+}
+
+/* Background Styles */
 .background {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* Ensure clicks go through to elements below */
-    z-index: 0; /* Ensure background is behind everything */
+    pointer-events: none;
+    z-index: 0;
     overflow-y: hidden;
 }
 
+/* Contact Styles */
 .contact {
     display: flex;
 }
 
-@media (max-width: 768px) {
-    .App-main {
-        flex-direction: column; /* Stack items vertically */
-    }
-
-    .content {
-        flex: auto; /* Take full width of the container */
-        width: 100%; /* Ensure items take full width */
-        margin-bottom: 10px; /* Optional: Add space between stacked items */
-    }
-
-    .project {
-        width: 50%;
-        height: 50%;
-    }
-
-    .toggle {
-        width: auto;
-        writing-mode: horizontal-tb;
-        transform: none;
-        padding: 0;
-    }
-}
-
-@media (max-width: 500px) {
-    .project {
-        width: 100%;
-        height: 50%;
-    }
-}
-
-.project:hover {
-    transform: translateY(-10px);
-}
-
+/* Social Icons Styles */
 .social-icons {
     height: 200px;
     margin-top: 10px;
@@ -192,4 +273,48 @@ nav a:hover {
 
 .social-icons a:hover {
     transform: translateY(-10px);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .App-main {
+        flex-direction: column;
+    }
+    
+    .content {
+        flex: auto;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .project {
+        width: 50%;
+        height: 50%;
+    }
+    
+    .toggle {
+        width: auto;
+        writing-mode: horizontal-tb;
+        transform: none;
+        padding: 0;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .services-header h2 {
+        font-size: 1.75rem;
+    }
+    
+    .cta-section {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .project {
+        width: 100%;
+        height: 50%;
+    }
 }
