@@ -21,6 +21,7 @@ function ProjectDisplay({ isDark }) {
         "/images/projects/Frame 17.png",
         "/images/projects/Frame 18.png",
       ],
+      features: "Fully responsive website with admin dashboard, customer dashboard, add-to-cart, checkout, FlagMaker (Create your own custom flags), customer sign-in and sign-up"
     },
     "Project 2": {
       title: "Planted City Church 🌱",
@@ -37,6 +38,7 @@ function ProjectDisplay({ isDark }) {
         "/images/projects/image 20.png",
         "/images/projects/image 21.png",
       ],
+      features: "Fully responsive website highlighting key information of the church; an online giving portal (Stripe); contact-us form with Google CAPTCHA; easy-to-find social media platforms; church location using Google Maps API"
     },
     "Project 3": {
       title: "Energy Efficiency Council",
@@ -53,6 +55,7 @@ function ProjectDisplay({ isDark }) {
         "/images/projects/eec/Frame 228.png",
         "/images/projects/eec/Frame 229.png",
       ],
+      features: "Sign-in and sign-up using myGov, customer dashboard, book-an-inspector, book-an-installer, information hub, rewards program"
     },
   };
 
@@ -105,6 +108,7 @@ function ProjectDisplay({ isDark }) {
           <h2>{currentProject.title}</h2>
           <p>{currentProject.description}</p>
           <p><strong>Tech Stack:</strong> {currentProject.techStack}</p>
+          <p><strong>Core Features:</strong> {currentProject.features}</p>
         </div>
       </div>
     </div>
