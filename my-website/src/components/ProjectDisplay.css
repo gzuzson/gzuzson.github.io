@@ -1,0 +1,202 @@
+.project-display {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.top-menu select {
+  padding: 10px 14px;
+  margin: 10px;
+  font-size: 16px;
+  font-family: var(--font-family-body);
+  background-color: var(--toggle-bg);
+  color: var(--primary-text-color);
+  border: 2px solid var(--secondary-text-color);
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+}
+
+.top-menu select:focus {
+  border-color: var(--toggle-bg);
+}
+
+
+/* Ensure content stays centered */
+.project-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Carousel Styling */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 1080px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.carousel-image {
+  width: 100%;
+  max-height: 80vh;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* Navigation Buttons */
+.carousel-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 10px;
+}
+
+.carousel-btn {
+  padding: 10px 16px;
+  font-size: 16px;
+  font-family: var(--font-family-body);
+  background: var(--toggle-bg);
+  color: var(--primary-text-color);
+  border: 2px solid var(--secondary-text-color);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.carousel-btn:hover {
+  color: var(--background-color);
+  transform: translateY(-2px);
+}
+
+.carousel-btn:active {
+  transform: scale(0.95);
+}
+
+/* Project Details */
+.project-details {
+  text-align: center;
+  margin-top: 15px;
+  padding: 10px;
+  width: 90%;
+  max-width: 800px;
+}
+
+.project-details h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.project-details p {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+/* Responsive Design */
+
+/* Tablets and smaller laptops */
+@media (max-width: 1024px) {
+  .carousel-container {
+    width: 90%;
+    max-width: 700px;
+  }
+
+  .carousel-image {
+    border-radius: 6px;
+  }
+
+  .project-details {
+    width: 95%;
+  }
+
+  .carousel-btn {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+}
+
+/* Smaller tablets and large phones */
+@media (max-width: 768px) {
+  .carousel-container {
+    width: 95%;
+    max-width: 600px;
+  }
+
+  .carousel-nav {
+    max-width: 250px;
+  }
+
+  .carousel-btn {
+    font-size: 14px;
+    padding: 6px 8px;
+  }
+
+  .project-details h2 {
+    font-size: 22px;
+  }
+
+  .project-details p {
+    font-size: 15px;
+  }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  .carousel-container {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .carousel-nav {
+    max-width: 200px;
+  }
+
+  .carousel-btn {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+
+  .project-details h2 {
+    font-size: 20px;
+  }
+
+  .project-details p {
+    font-size: 14px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 375px) {
+  .carousel-container {
+    max-width: 320px;
+  }
+
+  .carousel-btn {
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+
+  .project-details h2 {
+    font-size: 18px;
+  }
+
+  .project-details p {
+    font-size: 13px;
+  }
+}

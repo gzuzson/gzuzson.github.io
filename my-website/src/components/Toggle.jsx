@@ -22,8 +22,8 @@ function Toggle({ isDark, setIsDark, isShowingLogos, setIsShowingLogos }) {
             <p className="toggleLabel">LOGOS</p>
             <input
                 type="checkbox"
-                checked={!isShowingLogos}
-                onChange={handleOpacityToggle}
+                checked={isShowingLogos}
+                onChange={() => setIsShowingLogos((prev) => !prev)} 
             />
         </div>
     );

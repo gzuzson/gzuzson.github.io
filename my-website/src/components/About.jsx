@@ -39,7 +39,7 @@ function About() {
                 <p>
                     This website was built using React.js and React Fiber (three.js)
                     and is hosted on Github Pages. The website is maintained by me, last updated
-                    2024-12-18 :)
+                    2025-01-30 :)
                 </p>
             </div>
             <div className={styles.image}>

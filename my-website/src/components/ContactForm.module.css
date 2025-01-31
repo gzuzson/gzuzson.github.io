@@ -1,8 +1,10 @@
 form {
     width: 100%;
+    height: 100%;
     margin: 0 auto; /* Center the form horizontally */
     padding: 5px;
     z-index: 1;
+    overflow: hidden;
 }
 
 label {
@@ -22,12 +24,13 @@ textarea {
 }
 
 textarea {
-    height: 150px; /* Increase height for the textarea */
+    height: 250px; /* Increase height for the textarea */
 }
 
 input[type="submit"] {
-    background-color: #4caf50;
-    color: white;
+    background-color: var(--toggle-bg);
+    font-family: var(--font-family-body);
+    color: var(--primary-text-color);
     border: none;
     padding: 10px 20px;
     text-align: center;
@@ -39,5 +42,5 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #45a049;
+    color: var(--background-color);
 }

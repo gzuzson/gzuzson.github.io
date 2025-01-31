@@ -11,11 +11,11 @@
       }
 
       .cls-3 {
-        fill: #fff200;
+        fill: #ff00a7;
       }
 
       .cls-4 {
-        fill: #fff;
+        fill: #eef1e4;
         font-family: NHaasGroteskDSPro-65Md, 'Neue Haas Grotesk Display Pro';
         font-size: 12px;
         font-weight: 500;

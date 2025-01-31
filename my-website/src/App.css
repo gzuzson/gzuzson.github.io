@@ -1,13 +1,22 @@
 * {
     /*
-    border: 1px solid var(--foreground-color);
-     */
+    border: 1px solid var(--foreground-color); 
+    */
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0; /* Remove any default margin */
 }
 
 /* App Container Styles */
 .App {
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     background-color: var(--background-color);
     transition: background-color 0.25s ease-in-out;
@@ -18,27 +27,23 @@
 .App-header {
     width: 100%;
     display: flex;
-    padding: 15px;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 15px 20px;
     position: sticky;
     z-index: 1;
 }
 
-.App-main {
-    display: flex;
-    padding: 10px;
-    flex-wrap: wrap;
-}
-
 /* Navigation Styles */
 nav {
-    width: 100%;
+    justify-content: center;
+    align-items: center;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    padding-top: 10px;
+    gap: 1rem;
 }
 
 nav a {
+    padding: 10px;
     text-decoration: none;
     font-family: var(--font-family-body);
     font-weight: 400;
@@ -49,13 +54,52 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/* Position the landing page section */
+.landing-page {
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    color: var(--background-color);
+    font-family: var(--font-family-hero);
+    overflow-x: hidden;
+    z-index: 1; /* Ensure content is above the background */
+}
+
+.hero-text {
+    padding-bottom: 15%; 
+    width: 65vw; 
+    max-width: 70%;
+    z-index: 1;
+}
+
+/* Hero text styling */
+.hero-text h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    background-color: var(--toggle-bg);
+}
+
+.hero-text p {
+    font-size: 1.25rem;
+    font-weight: 400;
+    background-color: var(--toggle-bg);
+}
+
 /* Content Area Styles */
 .content {
-    width: 95%;
+    width: 99%;
     height: auto;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+    justify-content: center; /* Vertically center */
+    align-items: center; /* Horizontally center */
+    text-align: center; /* Center text inside content */
     padding: 15px;
     color: var(--primary-text-color);
     font-family: var(--font-family-body);
@@ -66,10 +110,8 @@ nav a:hover {
 
 /* Toggle Styles */
 .toggle {
-    width: 2%;
     display: flex;
-    writing-mode: vertical-lr;
-    transform: rotate(180deg);
+    align-items: center;
     padding: 5px;
     margin: 5px;
     gap: 10px;
@@ -111,15 +153,31 @@ nav a:hover {
     font-size: 44px;
     text-decoration: none;
     color: var(--primary-text-color);
+    z-index: 1;
+}
+
+.projects-container {
+    position: relative;
+    width: 100%;
+}
+
+.projects-header {
+    position: absolute;
+    top: 20px; /* Adjust this value to control how far down the header is moved */
+    left: 0;
+    width: 100%; /* Ensure it spans the full width */
 }
 
 /* Projects Grid Styles */
 .projects-grid {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-    margin: 2rem 0;
+    width: 80%;
+    margin: 5px 0;
     z-index: 1;
+    justify-content: center; 
+    align-items: center;
+
 }
 
 .project {
@@ -171,7 +229,7 @@ nav a:hover {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
     margin-bottom: 3rem;
-    width: 100%;
+    width: 85%;
 }
 
 .service-card {
@@ -206,8 +264,9 @@ nav a:hover {
     padding: 2rem;
     text-align: center;
     z-index: 1;
-    width: 100%;
+    width: 90%;
     box-sizing: border-box;
+    background-color: var(--toggle-bg);
 }
 
 .cta-section h3 {
@@ -224,8 +283,8 @@ nav a:hover {
 
 .cta-button {
     display: inline-block;
-    background: white;
-    color: #2563eb;
+    background: var(--primary-text-color);
+    color: var(--toggle-bg);
     padding: 0.75rem 1.5rem;
     border-radius: 6px;
     text-decoration: none;
@@ -234,7 +293,7 @@ nav a:hover {
 }
 
 .cta-button:hover {
-    background: #f8fafc;
+    background: var(--background-color);
 }
 
 /* Background Styles */
@@ -244,8 +303,8 @@ nav a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none;
     z-index: 0;
+    pointer-events: none;
     overflow-y: hidden;
 }
 
@@ -276,35 +335,62 @@ nav a:hover {
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
-    .App-main {
-        flex-direction: column;
+@media (max-width: 1024px) {
+    .hero-text {
+        max-width: 90%;
     }
     
-    .content {
-        flex: auto;
+    .projects-grid {
+        width: 95%;
+    }
+    
+    .services-grid {
         width: 100%;
-        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Stack header items */
+    .App-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 10px 15px;
+    }
+
+    /* First row: About, Logo, Contact */
+    .header-top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        flex-grow: 1;
+        text-align: center;
+    }
+    
+    .mobile-menu {
+        display: flex;
+    }
+    
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-text p {
+        font-size: 1.1rem;
     }
     
     .project {
-        width: 50%;
-        height: 50%;
-    }
-    
-    .toggle {
-        width: auto;
-        writing-mode: horizontal-tb;
-        transform: none;
-        padding: 0;
+        width: 45%;
     }
     
     .services-grid {
         grid-template-columns: 1fr;
-    }
-    
-    .services-header h2 {
-        font-size: 1.75rem;
     }
     
     .cta-section {
@@ -313,8 +399,19 @@ nav a:hover {
 }
 
 @media (max-width: 500px) {
+    .hero-text h1 {
+        font-size: 1.75rem;
+    }
+    
+    .hero-text p {
+        font-size: 1rem;
+    }
+    
     .project {
         width: 100%;
-        height: 50%;
+    }
+    
+    .social-icons a {
+        font-size: 2rem;
     }
 }
