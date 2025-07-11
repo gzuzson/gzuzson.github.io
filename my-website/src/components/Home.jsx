@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
+import { Link as RouterLink } from 'react-router-dom';
 import ProjectDisplay from "./ProjectDisplay";
 
 function Home({isDark}) {
@@ -11,102 +12,96 @@ function Home({isDark}) {
         alert('This project is no longer available')
     }
 
-    const services = [
-      {
-        title: "Custom Website Development",
-        description: "From portfolio sites to e-commerce platforms, I build responsive, modern websites tailored to your needs.",
-      },
-      {
-        title: "Web Application Development",
-        description: "Need something more complex? I create interactive web applications with React and modern technologies.",
-      },
-      {
-        title: "Website Optimization",
-        description: "Improve your existing website's performance, SEO, and user experience.",
-      }
-    ];
-
     return (
-        <div>
+        <div className="home-container">
             {/* Landing Page */}
             <div className="landing-page">
                 <div className="hero-text">
-                    <h1>From Concept to Launch: Your Full-Stack Web Development Partner</h1>
-                    <p>Whether you need a simple landing page or a complex web application, I work with you every step of the way to ensure that your project is delivered on time, within budget, and to your exact specifications!</p>
+                    <h1>Developer. Analyst. Designer.</h1>
+                    <p>
+                        I design and build reliable, scalable, and insight-driven software systems—from clean front-end interfaces to robust back-end logic and real-time data tools. With experience across full-stack development and a passion for structured thinking, I bring clarity to complex problems through code.
+                    </p>
+                    <p>
+                        My work reflects a deep interest in logic, systems, and uncovering truth through data—whether I’m developing collaborative web apps, building decision-support tools, or analyzing behaviour in complex environments.
+                    </p>
+                    <div className="hero-actions">
+                      <ScrollLink to="projects" className="primary-btn" smooth={true} duration={500}>My Projects</ScrollLink>
+                      <RouterLink to="/contact" className="secondary-btn">Hire Me</RouterLink>
+                    </div>
                 </div>
             </div>
 
             <div className="content"> 
-            {/* Services Header */}
-            <div className="services-header">
-                <h2>Transform Your Online Presence</h2>
-                <p>
-                    With a track record of successful projects and satisfied clients, I'll help bring your vision to life with clean, modern web development.
-                </p>
-            </div>
+                {/* Services Header */}
+                <div className="services-header">
+                    <h2>What I bring to a Team</h2>
+                    <p>
+                        I combine technical fluency with systems thinking to build tools that are robust, scalable, and grounded in real-world understanding. Whether contributing to a team or leading development, I bring structure, clarity, and an obsession with getting the fundamentals right.
+                    </p>
+                </div>
 
-            <ProjectDisplay isDark={false} />
-
-            <div className="projects-container">
-                <h1 className="projects-header">View my Projects</h1>
-            </div>
-
-            <div className="projects-grid"> 
-                <a className="project" href="https://theveryrare.co" target="_blank" rel="noopener noreferrer">
-                    <img src={isDark ? "/images/Logo%20White.png" : "/images/Logo%20Black.png"} 
-                        alt="TheVeryRare Logo" width="75%"/>
-                </a>
-                <a className="project" href="https://planted-city-church.onrender.com" target="_blank" rel="noopener noreferrer">
-                    <img
-                        src={isDark ? "/images/logos/SVG/planted-white.svg" : "/images/logos/SVG/planted-black.svg"}
-                        alt="Planted City Church Logo" width="70%"/>
-                </a>
-                <a className="project" href="https://www.figma.com/proto/6WuHT1vSoksJf0mgVdO02a/MIG---EEC-App?node-id=0-1&t=ah0BXmIRQ04E5oN6-1" target="_blank" rel="noopener noreferrer">
-                    <img
-                        src={isDark ? "/images/eec.png" : "/images/eec.png"}
-                        alt="Fiery Dragons Logo" width="50%"/>
-                </a>
-                <a className="project" href="https://github.com/gzuzson/StaticFactory" target="_blank" rel="noopener noreferrer">
-                    <img
-                        src={isDark ? "/images/logos/SVG/static-factory-white.svg" : "/images/logos/SVG/static-factory-black.svg"}
-                        alt="StaticFactory Logo" width="50%"/>
-                </a>
-                <a className="project" rel="noopener noreferrer" onClick={notAvailable}>
-                    <img
-                        src={isDark ? "/images/logos/SVG/flagmaster-white.svg" : "/images/logos/SVG/flagmaster-black.svg"}
-                        alt="FlagMaster Logo" width="50%"/>
-                </a>
-                <a className="project" rel="noopener noreferrer" onClick={handleClick}>
-                    <img src={isDark ? "/images/logos/SVG/entry-logo-white.svg" : "/images/logos/SVG/entry-logo-black.svg"}
-                         alt="Entry Logo" width="50%"/>
-                </a>
-                <a className="project" rel="noopener noreferrer"  onClick={handleClick}>
-                    <img
-                        src={isDark ? "/images/logos/SVG/fiery-dragons-white.svg" : "/images/logos/SVG/fiery-dragons-black.svg"}
-                        alt="Fiery Dragons Logo" width="50%"/>
-                </a>
-            </div>
-
-            {/* Services Grid and CTA */}
-            <div className="services-grid">
-                {services.map((service, index) => (
-                    <div key={index} className="service-card">
-                        <h3>{service.title}</h3>
-                        <p>{service.description}</p>
+                <div className="skills-overview">
+                  <h2>Core Strengths</h2>
+                  <div className="skills-grid">
+                    <div className="skill">
+                      <h4>System Architecture</h4>
+                      <p>I break down complexity and build scalable systems with clean backend logic and efficient data flow.</p>
                     </div>
-                ))}
-            </div>
+                    <div className="skill">
+                      <h4>Data & Insight</h4>
+                      <p>I love using data to find patterns, derive insight, and drive decision-making—turning ambiguity into clarity.</p>
+                    </div>
+                    <div className="skill">
+                      <h4>Full-Stack Web Dev</h4>
+                      <p>From beautiful UIs to reliable backend systems, I deliver complete web apps using modern frameworks.</p>
+                    </div>
+                  </div>
+                </div>
 
-            <div className="cta-section">
-                <h3>Ready to Start Your Project?</h3>
+                <div id="projects" className="projects-header">
+                  <h2>Highlighted Projects</h2>
+                  <p>Here are some of the systems I've built—from collaborative tools to live applications solving real-world problems.</p>
+                </div>
+
+                <ProjectDisplay isDark={false} />
+
+                <div className="approach-toolbox-section">
+                  <div className="approach">
+                    <h2>My Approach</h2>
+                    <p>
+                      I believe great software starts with empathy and ends with impact. Whether it’s a lightweight prototype or a full-scale system, I value clarity, context, and craftsmanship in every step—from understanding user needs to delivering clean, maintainable code.
+                    </p>
+                    <p>
+                      I don’t just build features—I build systems that make sense.
+                    </p>
+                  </div>
+
+                  <div className="toolbox">
+                    <h2>Toolbox</h2>
+                    <p>
+                      Here are some of the technologies I’ve worked with to deliver full-stack, data-powered systems:
+                    </p>
+                    <ul className="stack-list">
+                        <li><strong>Languages:</strong> HTML5, CSS3, JavaScript, PHP, Java, Python</li>
+                        <li><strong>Databases:</strong> MySQL, MongoDB</li>
+                        <li><strong>Frontend:</strong> Vanilla JS, Bootstrap, Tailwind CSS, React</li>
+                        <li><strong>Backend:</strong> CakePHP, Node.js, Flask</li>
+                        <li><strong>Design & UX:</strong> Figma, Adobe Photoshop, Adobe Illustrator</li>
+                        <li><strong>Dev Tools:</strong> Git, Bash, VS Code, Postman</li>
+                        <li><strong>Data Analysis:</strong> Python (Pandas, NumPy), SQL, Excel, CSV pipelines, Data Cleaning</li>
+                        <li><strong>Data Visualization:</strong> Google Charts, ECharts, D3.js</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="cta-section">
+                <h3>Let’s Build Something Thoughtful</h3>
                 <p>
-                    Let's discuss how I can help you achieve your goals. I offer competitive rates and flexible collaboration options.
+                    Whether you’re building a product, solving a problem, or exploring a prototype—I’d love to hear from you.
                 </p>
-                <Link to="/contact" className="cta-button">
-                    Get in Touch →
-                </Link>
+                <RouterLink to="/contact" className="cta-button">Start a Conversation →</RouterLink>
+                </div>
             </div>
-        </div>
         </div>
     );
 }

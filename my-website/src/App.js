@@ -2,10 +2,12 @@ import './App.css';
 import React, { useState } from "react";
 import useLocalStorage from "use-local-storage";
 import AppHeader from "./components/AppHeader";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import BlogList from './components/BlogList';
+import BlogPost from './components/BlogPost';
 import ThreeScene from "./components/ThreeScene/ThreeScene";
 import { Canvas } from "@react-three/fiber";
 
@@ -15,7 +17,7 @@ function App() {
     const [isShowingLogos, setIsShowingLogos] = useState(true); // State for ThreeScene visibility
 
     return (
-        <BrowserRouter>
+        <HashRouter>
             <div className="App" data-theme={isDark ? "dark" : "light"}>
                 {/* Pass toggle props to AppHeader */}
                 <AppHeader
@@ -30,6 +32,8 @@ function App() {
                             <Route path="/" element={<Home isDark={isDark} />} />
                             <Route path="/about" element={<About />} />
                             <Route path="/contact" element={<Contact />} />
+                            <Route path="/blog" element={<BlogList />} />
+                            <Route path="/blog/:slug" element={<BlogPost />} />
                         </Routes>
                     </div>
                 </main>
@@ -42,9 +46,11 @@ function App() {
                     <Canvas
                         camera={{ position: [0, 0, 10] }}
                         style={{
-                            width: '99vw',
-                            height: '100vh',
-                            pointerEvents: 'none', // Prevent interaction with the scene
+                        width: '100%',
+                        height: '100%',
+                        display: 'block',
+                        pointerEvents: 'none',
+                        overflow: 'hidden',
                         }}
                     >
                         <ambientLight intensity={Math.PI / 2} />
@@ -64,7 +70,7 @@ function App() {
                     </Canvas>
                 </div>
             )}
-        </BrowserRouter>
+        </HashRouter>
     );
 }
 

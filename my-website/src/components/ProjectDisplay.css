@@ -1,3 +1,75 @@
+/* Main layout wrapper */
+.project-layout {
+  display: flex;
+  width: 100%;
+}
+
+/* Desktop Sidebar */
+.project-sidebar {
+  width: 220px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--secondary-text-color);
+}
+
+.project-tab {
+  padding: 10px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  border: 1px solid var(--secondary-text-color);
+  color: var(--primary-text-color);
+  font-family: var(--font-family-body);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.project-tab:hover {
+  background-color: var(--toggle-bg);
+}
+
+.project-tab.active {
+  background-color: var(--toggle-bg);
+  font-weight: bold;
+}
+
+/* Main content panel */
+.project-main {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Mobile dropdown */
+.project-select {
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid var(--secondary-text-color);
+  background-color: var(--toggle-bg);
+  color: var(--primary-text-color);
+  font-family: var(--font-family-body);
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 768px) {
+  .project-layout {
+    flex-direction: column;
+  }
+
+  .project-sidebar {
+    display: none;
+  }
+
+  .project-main {
+    padding: 10px;
+  }
+}
+
 .project-display {
   width: 100%;
   padding: 10px;

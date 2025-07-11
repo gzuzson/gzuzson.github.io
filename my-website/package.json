@@ -12,10 +12,14 @@
     "@testing-library/user-event": "^13.5.0",
     "emailjs": "^4.0.3",
     "emailjs-com": "^3.2.0",
+    "front-matter": "^4.0.2",
+    "gray-matter": "^4.0.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-markdown": "^10.1.0",
     "react-router-dom": "^6.24.0",
-    "react-scripts": "^0.0.0",
+    "react-scripts": "^5.0.1",
+    "react-scroll": "^1.9.3",
     "react-slick": "^0.30.3",
     "react-transition-group": "^4.4.5",
     "slick-carousel": "^1.8.1",
@@ -24,9 +28,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
@@ -50,6 +54,8 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.1.1"
+    "@craco/craco": "^7.1.0",
+    "gh-pages": "^6.1.1",
+    "raw-loader": "^4.0.2"
   }
 }

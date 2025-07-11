@@ -5,9 +5,10 @@
 }
 
 html, body {
-    height: 100%;
     width: 100%;
     margin: 0; /* Remove any default margin */
+    padding: 0;
+    overflow-x: hidden;
 }
 
 /* App Container Styles */
@@ -15,6 +16,7 @@ html, body {
     width: 100%;
     min-height: 100vh;
     display: flex;
+    margin: 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -66,6 +68,8 @@ nav a:hover {
     color: var(--background-color);
     font-family: var(--font-family-hero);
     overflow-x: hidden;
+    width: 100vw;
+    box-sizing: border-box;
     z-index: 1; /* Ensure content is above the background */
 }
 
@@ -90,23 +94,64 @@ nav a:hover {
     background-color: var(--toggle-bg);
 }
 
+.hero-actions {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.primary-btn, .secondary-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-family: var(--font-family-body);
+    text-decoration: none;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.primary-btn {
+    background-color: var(--primary-text-color);
+    color: var(--background-color);
+    border: none;
+}
+
+.primary-btn:hover {
+    background-color: var(--toggle-bg);
+    color: var(--primary-text-color);
+}
+
+.secondary-btn {
+    background-color: transparent;
+    border: 2px solid var(--primary-text-color);
+    color: var(--primary-text-color);
+}
+
+.secondary-btn:hover {
+    background-color: var(--toggle-bg);
+    color: var(--background-color);
+}
+
 /* Content Area Styles */
 .content {
-    width: 99%;
+    width: 100%;
+    max-width: 100vw;
     height: auto;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    justify-content: center; /* Vertically center */
-    align-items: center; /* Horizontally center */
-    text-align: center; /* Center text inside content */
-    padding: 15px;
-    color: var(--primary-text-color);
-    font-family: var(--font-family-body);
-    margin: 5px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 15px; /* Add horizontal padding instead of margin */
+    overflow-x: hidden; /* This ensures no child causes scroll */
     overflow-y: auto;
     gap: 3rem;
+    color: var(--primary-text-color);
+    font-family: var(--font-family-body);
 }
+
 
 /* Toggle Styles */
 .toggle {
@@ -162,17 +207,148 @@ nav a:hover {
 }
 
 .projects-header {
-    position: absolute;
-    top: 20px; /* Adjust this value to control how far down the header is moved */
+    position: relative; 
+    top: 0;
     left: 0;
-    width: 100%; /* Ensure it spans the full width */
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 15px;
 }
+
+.skills-overview {
+    width: 100%;
+    max-width: 1100px;
+    padding: 0 15px;
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.skills-overview h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-family-hero);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.skill {
+    background-color: var(--toggle-bg);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+}
+
+.skill h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    font-weight: bold;
+    font-family: var(--font-family-hero);
+}
+
+.skill p {
+    font-size: 1rem;
+    color: var(--primary-text-color);
+}
+
+.projects-header {
+    padding: 3rem 15px 1rem 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.projects-header h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-family: var(--font-family-hero);
+}
+
+.projects-header p {
+    font-size: 1.1rem;
+    color: var(--primary-text-color);
+}
+
+.approach-toolbox-section {
+    width: 100%;
+    max-width: 900px;
+    padding: 2rem 1rem;
+    text-align: left;
+    font-family: var(--font-family-body);
+    color: var(--primary-text-color);
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    box-sizing: border-box;
+}
+
+.approach h2,
+.toolbox h2 {
+    font-size: 2rem;
+    font-family: var(--font-family-hero);
+    margin-bottom: 1rem;
+}
+
+.approach p,
+.toolbox p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.stack-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.stack-list li {
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .approach-toolbox-section {
+        padding: 1.5rem 1rem;
+    }
+
+    .approach h2,
+    .toolbox h2 {
+        font-size: 1.5rem;
+    }
+
+    .stack-list li {
+        font-size: 0.95rem;
+    }
+}
+
+.content > *:not(:last-child)::after {
+    content: "";
+    display: block;
+    margin: 3rem auto;
+    width: 40%;
+    height: 1px;
+    background-color: var(--foreground-color);
+    opacity: 0.2;
+}
+
 
 /* Projects Grid Styles */
 .projects-grid {
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
+    max-width: 100vw; 
+    box-sizing: border-box;
+    overflow-x: hidden;
     margin: 5px 0;
     z-index: 1;
     justify-content: center; 
@@ -223,40 +399,6 @@ nav a:hover {
     color: var(--primary-text-color);
 }
 
-/* Services Grid Styles */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-    margin-bottom: 3rem;
-    width: 85%;
-}
-
-.service-card {
-    background: var(--background-color);
-    border: 1px solid var(--foreground-color);
-    border-radius: 8px;
-    padding: 1.5rem;
-    text-align: center;
-    transition: transform 0.2s ease;
-    z-index: 1;
-}
-
-.service-card:hover {
-    transform: translateY(-5px);
-}
-
-.service-card h3 {
-    font-size: 1.25rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    font-family: var(--font-family-hero);
-}
-
-.service-card p {
-    color: var(--primary-text-color);
-}
-
 /* CTA Section Styles */
 .cta-section {
     border: 1px solid var(--foreground-color);
@@ -267,6 +409,7 @@ nav a:hover {
     width: 90%;
     box-sizing: border-box;
     background-color: var(--toggle-bg);
+    margin-bottom: 10vh;
 }
 
 .cta-section h3 {
@@ -301,11 +444,19 @@ nav a:hover {
     position: absolute;
     top: 0;
     left: 0;
+    right: 0; 
+    bottom: 0;
     width: 100%;
     height: 100%;
     z-index: 0;
     pointer-events: none;
-    overflow-y: hidden;
+    overflow: hidden;
+}
+
+canvas {
+    display: block;
+    box-sizing: border-box;
+    max-width: 100%;
 }
 
 /* Contact Styles */

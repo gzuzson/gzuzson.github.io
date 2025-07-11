@@ -9,6 +9,7 @@ function AppHeader({ isDark, setIsDark, isShowingLogos, setIsShowingLogos }) {
             <nav>
                 <Link to="/" className="logo">MIAH</Link>
                 <Link to="/about">About</Link>
+                <Link to="/blog">Blog</Link>
                 <Link to="/contact">Contact</Link>
             </nav>
             </div>

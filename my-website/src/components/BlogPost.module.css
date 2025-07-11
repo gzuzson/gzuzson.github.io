@@ -1,0 +1,40 @@
+.blogPost {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  min-height: 100vh;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-text-color);
+}
+
+.date {
+  color: var(--secondary-text-color);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.contentBody {
+  line-height: 1.7;
+  font-size: 1rem;
+  color: var(--primary-text-color);
+}
+
+.contentBody h3 {
+  margin-top: 1.5rem;
+  color: var(--primary-accent);
+}
+
+.contentBody a {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+.notFound {
+  text-align: center;
+  padding: 4rem;
+  color: #999;
+}

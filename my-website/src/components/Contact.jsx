@@ -4,7 +4,7 @@ import './ContactForm.module.css';
 
 function Contact() {
     return (
-        <div className="content">
+        <div className="content contact-page">
             <ContactForm />
         </div>
     );

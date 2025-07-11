@@ -1,34 +1,70 @@
-.text {
-    box-sizing: border-box;
-    margin: 5px;
-    padding: 5px;
-    display: flex;
-    flex: 5;
-    flex-direction: column;
-    overflow-y: auto;
-    z-index: 1;
+.aboutContainer {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
 }
 
-.text p {
-    margin: 5px;
-    padding: 5px;
+.section {
+  margin-bottom: 1rem;
 }
 
-.image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 2;
-    padding: 10px;
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
 }
 
-.image img {
-    min-width: 200px;
-    max-width: 400px;
+.profileImage {
+  border-radius: 12px;
+  max-width: 250px;
 }
 
-@media (max-width: 1080px) {
-    .text, .image {
-        flex: auto; /* Ensures both take full width and stack vertically */
-    }
+.textBlock {
+  flex: 1;
+  min-width: 250px;
+}
+
+.bulletList {
+  list-style: none;
+  padding-left: 0;
+}
+
+.bulletList li::before {
+  content: "•";
+  margin-right: 0.5rem;
+  color: var(--primary);
+}
+
+.badgeGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.badgeGrid span {
+  background-color: var(--foreground-color);
+  color: var(--background-color);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.techGroup {
+  margin-bottom: 1rem;
+  color: var(--primary-text-color)
+}
+
+.blogLink {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: var(--link-color);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.blogLink:hover {
+  text-decoration: underline;
 }
