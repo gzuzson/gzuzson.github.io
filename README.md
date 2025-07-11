@@ -24,7 +24,7 @@ npm run deploy
 ```
 
 Once the above command is run, make sure to update the custom domain on GitHub at gzuzson.github.io -> Settings -> Pages. 
-By default, GitHub pages removes the custom domain when deploying a new version of the website.  
+By default, GitHub pages removes the custom domain when deploying a new version of the website.  A .nojekyll file also needs to be added manually to the gh-pages branch
 
 ## TO-DO
 - [X] Update About Me section
