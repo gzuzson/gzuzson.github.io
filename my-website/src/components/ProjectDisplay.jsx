@@ -8,7 +8,7 @@ function ProjectDisplay({ isDark }) {
 
   const projects = {
     "Project 1": {
-      title: "Monash Paramedicine and Healthcare Excellence Canada 🚑", 
+      title: "Monash Paramedicine 🚑",
       role: "Software Developer/Data Analyst",
       contribution: "Led development of a web-based assessment tool to support community paramedics in co-designing health programs with underserved populations. Designed database schema, built full-stack features using CakePHP, implemented offline support with IndexedDB and Dexie.js, and integrated data visualization (D3.js, ECharts) and PDF report generation. Translated qualitative insights into quantitative formats to enable scalable analysis.", 
       images: [

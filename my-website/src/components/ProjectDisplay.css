@@ -45,6 +45,8 @@
 
 /* Mobile dropdown */
 .project-select {
+  width: 100%;
+  max-width: 100%;
   margin-bottom: 20px;
   padding: 10px;
   font-size: 16px;
