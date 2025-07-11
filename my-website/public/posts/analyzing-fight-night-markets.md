@@ -5,7 +5,7 @@ summary: "A breakdown of how betting markets behave in high-profile boxing match
 slug: "fight-market-analysis-pacquiao-barrios-tszyu-fundora"
 ---
 
-Understanding combat sports betting isn't just about who wins—it's about **how markets move** in response to narratives, timing, psychology, and sharp vs. public money. In this article, I break down two upcoming fights—**Manny Pacquiao vs Mario Barrios** and **Tim Tszyu vs Sebastian Fundora**—from a data and market behavior lens.
+Understanding combat sports betting isn't just about who wins—it's about **how markets move** in response to narratives, timing, psychology, and sharp vs. public money. In this article, I break down two upcoming fights—**Manny Pacquiao vs Mario Barrios** and **Tim Tszyu vs Sebastian Fundora**—from a data and market behaviour lens.
 
 ---
 
@@ -22,7 +22,7 @@ Each offers insight into how **sentiment, stats, and public bias** collide in sh
 
 ### 1. Pacquiao vs Barrios – The Narrative Mirage
 
-Manny Pacquiao is a legend, but also 46 years old, returning after years of inactivity. Mario Barrios is younger, active, and has size—but has been cracked before. Despite Barrios being statistically favored, market sentiment may swing toward Pacquiao based on:
+Manny Pacquiao is a legend, but also 46 years old, returning after years of inactivity. Mario Barrios is younger, active, and has size—but has been cracked before. Despite Barrios being statistically favoured, market sentiment may swing toward Pacquiao based on:
 
 - **Narrative bias**: Emotional money pours in for legacy fighters
 - **Anchoring**: Bettors remember Pacquiao’s dominance, not his layoff
@@ -65,7 +65,7 @@ Throughout both fights, several first principles help guide smart pricing:
 
 ### Final Thoughts
 
-For someone who loves the art of fighting and the science of markets, these events are more than entertainment—they're live data streams of human psychology, statistical modeling, and decision-making under uncertainty.
+For someone who loves the art of fighting and the science of markets, these events are more than entertainment—they're live data streams of human psychology, statistical modelling, and decision-making under uncertainty.
 
 Whether you're betting, trading, or just watching—you’re participating in a dance between perception and probability.
 
