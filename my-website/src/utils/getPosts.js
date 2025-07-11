@@ -12,7 +12,7 @@ export async function getPostList() {
 
   const posts = await Promise.all(
     postFiles.map(async ({ slug, path }) => {
-      const response = await fetch(path);
+      const response = await fetch(`${process.env.PUBLIC_URL}/posts/${slug}.md`);
       const text = await response.text();
       const { attributes, body } = fm(text);
       return {
