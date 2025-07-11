@@ -2,9 +2,9 @@
 import fm from 'front-matter';
 
 const postFiles = [
-  { slug: 'analyzing-fight-night-markets', path: '/posts/third-post.md' },
-  { slug: 'building-the-community-paramedicine-needs-assessment-tool', path: '/posts/second-post.md' },
-  { slug: 'why-i-build', path: '/posts/first-post.md' },
+  { slug: 'analyzing-fight-night-markets'},
+  { slug: 'building-the-community-paramedicine-needs-assessment-tool'},
+  { slug: 'why-i-build'},
 ];
 
 export async function getPostList() {
