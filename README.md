@@ -28,6 +28,6 @@ By default, GitHub pages removes the custom domain when deploying a new version 
 
 ## TO-DO
 - [X] Update About Me section
-- [ ] Add a Blog feature to the website
+- [X] Add a Blog feature to the website
 - [X] Add other projects to homepage of the website:  FlagMaster and Planted City Church
 - [ ] Add CAPTCHA to contact me section of website
