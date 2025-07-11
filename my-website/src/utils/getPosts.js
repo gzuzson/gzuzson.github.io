@@ -1,19 +1,24 @@
 // utils/getPosts.js
 import fm from 'front-matter';
 
+const postFiles = [
+  { slug: 'analyzing-fight-night-markets', path: '/posts/third-post.md' },
+  { slug: 'building-the-community-paramedicine-needs-assessment-tool', path: '/posts/second-post.md' },
+  { slug: 'why-i-build', path: '/posts/first-post.md' },
+];
+
 export async function getPostList() {
-  const files = ['third-post.md', 'second-post.md', 'first-post.md']; // manually list or automate later
+  const fm = (await import('front-matter')).default;
 
   const posts = await Promise.all(
-    files.map(async (file) => {
-      const res = await fetch(`/posts/${file}`);
-      const text = await res.text();
-
+    postFiles.map(async ({ slug, path }) => {
+      const response = await fetch(path);
+      const text = await response.text();
       const { attributes, body } = fm(text);
       return {
         ...attributes,
         content: body,
-        slug: attributes.slug || file.replace('.md', ''),
+        slug,
       };
     })
   );
